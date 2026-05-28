@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Contact Us
+{% endblock pagetitle %}
+
+{% block body %}
+<head>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "y2X8AOLmTPlgSX6pZ",
+      });
+   })();
+</script>
+</head>
+
+<!-- HEADER SECTION -->
+<div class="row mb-5 text-center text-white laptop" style="background-color: #7acb6c;">
+    <div class="col-lg-10 mx-auto py-5">
+        <h1 class="display-4" style="font-weight: 500; color: rgb(4, 54, 4);">
+            📞 Contact-Us 📞
+        </h1>
+        <p class="lead" style="font-weight: 500; color: black;">
+            For Any Queries & Suggestions Contact Us. We Are Happy To Help.
+        </p>
+    </div>
+</div>
+
+<!-- CONTACT FORM SECTION -->
+<div class="container mb-5">
+    <div class="row g-4">
+
+        <!-- LEFT CARD : CONTACT FORM -->
+        <div class="col-md-6">
+            <div class="p-5 bg-white shadow rounded-lg h-100">
+                <h3 class="text-center mb-4">Send Us a Message</h3>
+
+                <form id="contact-form">
+                    <!-- Name -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Name</label>
+                        <input type="text" name="name" class="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Email</label>
+                        <input type="email" name="email" class="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Message</label>
+                        <textarea name="message" rows="5" class="message"
+                            placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success px-4" onclick="send();">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- RIGHT CARD : CONTACT INFO -->
+        <div class="col-md-6">
+            <div class="p-5 bg-white shadow rounded-lg h-100">
+                <h3 class="text-center mb-4">Contact Information</h3>
+
+                <p class="lead">
+                    📧 <b>Email:</b> bioscan207@gmail.com
+                </p>
+                <p class="lead">
+                    📞 <b>Phone:</b> +91 98765 43210
+                </p>
+                <p class="lead">
+                    📍 <b>Location:</b> India
+                </p>
+
+                <hr>
+
+                <p class="text-muted">
+                    We usually respond within 24 hours.  
+                    Feel free to reach out for any help related to plant disease detection.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+ 
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    // 🔴 PUT YOUR REAL PUBLIC KEY HERE
+    emailjs.init("y2X8AOLmTPlgSX6pZ");
+
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm(
+        "service_xejtg60",   // e.g. service_xejtg60
+        "template_5gn4gel",  // e.g. template_5gn4gel
+        form
+      )
+      .then(function () {
+        alert("✅ Message sent successfully!");
+        form.reset();
+      })
+      .catch(function (error) {
+        alert("❌ Failed to send message. Please try again.");
+        console.error("EmailJS Error:", error);
+      });
+    });
+
+  });
+</script> -->
+
+<script>
+ function send(){
+     const templateparams ={
+        name : document.querySelector(".name").value,
+        email : document.querySelector(".email").value,
+        // subject : document.querySelector("#subject").value,
+        message : document.querySelector(".message").value,
+
+       
+    }
+    console.log("2 in email");
+
+emailjs
+    .send("service_2jqunxs","template_xppatmi",templateparams)
+    .then(() => alert("Email sent !!")).catch((() => alert("Email Not send !!")));
+
+  
+
+}
+</script>
+
+
+
+
+{% endblock body %}

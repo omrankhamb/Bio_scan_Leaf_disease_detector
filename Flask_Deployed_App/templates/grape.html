@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plant Disease Detection
+{% endblock pagetitle %}
+{% block body %}
+<style>
+  body{
+    overflow-x: hidden;
+  }
+  .p-3.bg-white.shadow.rounded-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media only screen and (max-width: 830px) {
+    .laptop{
+      display: none;
+    }
+  }
+  @media (min-width:830px) and (max-width: 1536px){
+    .mobile{
+      display: none;
+    }
+  }
+</style>
+<div class='mobile p-5'>
+  <div class="row mb-5 text-center text-white">
+    <div class="col-lg-10 mx-auto">
+      <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color:red;"><b>Note✍🏻</b></h1>
+      <p class="lead" style="font-weight: 500;color: black;">Please🙏 Open This Site On Laptop/PC 💻 Screen Only</p>
+      <p class="lead" style="font-weight: 500;color: black;">Thank You 🤝</p>    
+    </div>
+</div>
+</div>
+
+<div class="row mb-5 text-center text-white laptop">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍁Plant Disease
+                Detection🍁 </b></h1>
+        <p class="lead" style="font-weight: 500;color: black;">This AI Engine Will Help To Detect Disease From Following Fruites And Veggies</p>
+    </div>
+</div>
+
+<center class="laptop">
+    <a href="/index">
+    <button class = "bttn-pill bttn-lg btn-success"><b style="color: black;">AI Engine</b></button>
+</a>
+</center>
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://i.ndtvimg.com/i/2015-09/grapes_625x350_61443376353.jpg" alt="Apple" ></div>
+          <center><p class="lead" style="font-weight: 500;color: black;">grape</p></center>
+        </div>
+    </div>
+    
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.3Oq_s3AGh-tyG6_b2_U6zwHaFj?w=225&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Downy Mildew"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Downy Mildew</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Yellow oil-like spots on upper leaf surface, white powdery growth on underside.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Improve air circulation, apply copper sulfate fungicides, remove infected leaves, crop rotation.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.nLJ5ZbZgZ0jcpdT41mNGugAAAA?w=226&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Powdery Mildew"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Powdery Mildew</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> White powdery coating on leaves, shoots, berries, and flower buds.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Apply sulfur fungicides, ensure good air circulation, prune dense foliage, and maintain vine health.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.f0q4yKoe6XEewBnQgE1y5QHaFj?w=215&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Black Rot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Black Rot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Dark brown lesions on leaves with concentric rings, berries turn black and shrivel.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove affected berries and shoots, apply Bordeaux mixture, improve canopy ventilation.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.xYnoi9fXGNdvCy9wKbxIHgHaE7?w=285&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Anthracnose"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Anthracnose</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Dark spots on leaves with red borders, sunken lesions on shoots and fruit.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Prune infected canes, apply fungicides, remove fallen leaves, and practice crop rotation.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.KPxUSrcfiY1Hs0wE85vdxAHaE9?w=260&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Leaf Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Leaf Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Brown or tan spots on grape leaves with reddish margins, spots enlarge and coalesce.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Apply copper fungicides, remove infected leaves, improve air circulation, and sanitize tools.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.EVZRaO49Ic7_-7tU_MAGUAHaFi?w=259&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Ripe Rot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Ripe Rot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Soft rot of ripe berries with brown discoloration, white mold growth on fruit.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected berries, apply fungicides at veraison, improve air flow, and maintain canopy health.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.7FG-1U4Mr1HYUuEuqSgZSQHaFW?w=247&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Grapevine Yellows"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Grapevine Yellows</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Yellowing of leaves, reduced growth, and poor fruit development in affected plants.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected vines, control insect vectors, use healthy propagating material, and practice roguing.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.UJXpJrrGH7fbSRaWUuth_QHaDt?w=337&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Botrytis Bunch Rot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Botrytis Bunch Rot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Gray mold on berries causing soft rot, especially during humid conditions.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Thin flower clusters, improve air circulation, apply fungicides, and harvest at optimal maturity.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col-lg-12">
+        <h2 style="color: rgb(4, 54, 4); text-align: center; margin-bottom: 30px;"><b>🥗 Nutritional Supplements & Health Benefits</b></h2>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Resveratrol</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Powerful antioxidant found in grape skins, supports heart health and reduces inflammation.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Consume 1-2 cups of fresh grapes daily or 5 oz of red wine for maximum resveratrol intake.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Vitamin C</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Boosts immune system, aids collagen synthesis, and protects against free radicals.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> One cup of grapes provides 15% of daily Vitamin C requirements; combine with citrus for enhanced absorption.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Antioxidants</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Quercetin and anthocyanins reduce oxidative stress and support brain health.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Dark purple/red grapes contain highest antioxidant levels; consume 150-200g daily.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Potassium</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Regulates blood pressure, supports heart function, and maintains fluid balance.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> One cup of grapes provides 10% of daily potassium; ideal for athletes and heart health.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Fiber</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Improves digestive health, aids weight management, and stabilizes blood sugar.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Eat grapes with skin for optimal fiber content; aim for 1-2 servings per day.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Polyphenols</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Anti-inflammatory compounds that support cardiovascular and neurological health.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Fresh grapes, grape juice (unsweetened), and red wine are excellent polyphenol sources.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

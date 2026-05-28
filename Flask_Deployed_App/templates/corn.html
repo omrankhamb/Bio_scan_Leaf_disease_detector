@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plant Disease Detection
+{% endblock pagetitle %}
+{% block body %}
+<style>
+  body{
+    overflow-x: hidden;
+  }
+  .p-3.bg-white.shadow.rounded-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media only screen and (max-width: 830px) {
+    .laptop{
+      display: none;
+    }
+  }
+  @media (min-width:830px) and (max-width: 1536px){
+    .mobile{
+      display: none;
+    }
+  }
+</style>
+<div class='mobile p-5'>
+  <div class="row mb-5 text-center text-white">
+    <div class="col-lg-10 mx-auto">
+      <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color:red;"><b>Note✍🏻</b></h1>
+      <p class="lead" style="font-weight: 500;color: black;">Please🙏 Open This Site On Laptop/PC 💻 Screen Only</p>
+      <p class="lead" style="font-weight: 500;color: black;">Thank You 🤝</p>    
+    </div>
+</div>
+</div>
+
+<div class="row mb-5 text-center text-white laptop">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍁Plant Disease
+                Detection🍁 </b></h1>
+        <p class="lead" style="font-weight: 500;color: black;">This AI Engine Will Help To Detect Disease From Following Fruites And Veggies</p>
+    </div>
+</div>
+
+<center class="laptop">
+    <a href="/index">
+    <button class = "bttn-pill bttn-lg btn-success"><b style="color: black;">AI Engine</b></button>
+</a>
+</center>
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.dU1Sh_yvLcmh10m8OiT-BwHaE-?w=247&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Apple" ></div>
+          <center><p class="lead" style="font-weight: 500;color: black;">corn</p></center>
+        </div>
+    </div>
+    
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.khIVOsb5FrRRV6o8GFBQ7QHaFM?w=274&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Gray Leaf Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Gray Leaf Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Gray-brown rectangular lesions on corn leaves with dark borders.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use resistant varieties, crop rotation, fungicide sprays, and improve air circulation.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.S8Tb2-2ztjZgXrXSQV2f5AHaJ4?w=160&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Northern Corn Leaf Blight"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Northern Corn Leaf Blight</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Long, narrow tan lesions on leaves with darker borders spreading rapidly.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Plant resistant hybrids, timely fungicide applications, and proper crop rotation.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.f1est5wi2dRpEP8xz21alwHaE7?w=249&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Southern Corn Leaf Blight"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Southern Corn Leaf Blight</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Eye-shaped lesions with tan centers and dark reddish borders on leaves.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use resistant varieties, crop rotation, remove plant debris, and apply fungicides.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.BqPybMqWck7EokjJqkSD6QHaE_?w=257&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Common Rust"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Common Rust</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Reddish-brown pustules on both leaf surfaces of corn plants.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Plant resistant hybrids, apply fungicides when needed, and maintain proper spacing.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.XARXJSGcTG8tu7_l5sMtQAHaJ4?w=152&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Maize Dwarf Mosaic"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Maize Dwarf Mosaic</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Mosaic mottling, leaf streaking, and stunted growth of corn plants.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use resistant varieties, control aphid vectors, remove infected plants, and practice crop rotation.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.IC5NvsZVMhThXr_UP_BzKAHaE8?w=253&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Corn Smut"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Corn Smut</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Large black/gray galls on ears, tassels, stalks, and leaves.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use resistant varieties, remove infected plant parts, practice crop rotation, and maintain hygiene.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.ixN3atw1pxIkqAKB6YUbSgHaE8?w=218&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Anthracnose"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Anthracnose</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Dark, sunken lesions on stalks and leaves causing wilting and stalk rot.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use resistant hybrids, improve air circulation, crop rotation, and remove infected debris.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.oTcOYTx_KN0fP4hdcjj27QHaE5?w=285&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Stewart's Wilt"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Stewart's Wilt</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Yellowing, wilting of leaves with water-soaked streaks on corn plants.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use resistant varieties, control beetle vectors, and practice crop rotation.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col-lg-12">
+        <h2 style="color: rgb(4, 54, 4); text-align: center; margin-bottom: 30px;"><b>🥗 Nutritional Supplements & Fertilizers</b></h2>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Folate (Vitamin B9)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Essential for cell division, DNA synthesis, and fetal development.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> One cup corn provides 76mcg folate; important for pregnancy and red blood cell formation.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Lutein & Zeaxanthin</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Carotenoids that protect eye health, reduce macular degeneration risk.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Yellow corn rich in these compounds; eat 1-2 servings weekly for eye health.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Urea Fertilizer (46-0-0)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> High nitrogen content promotes vigorous vegetative growth in corn.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply 100-150 lbs/acre split at planting and V4-V6 growth stage (4-6 leaves).</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Ammonium Nitrate (34-0-0)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Quick nitrogen source, promotes leaf and stalk development in corn.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply 50-75 lbs/acre at V6-V8 stage; water in for faster absorption.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Zinc Sulfate</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Micronutrient for enzyme function, prevents zinc deficiency in corn.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Spray 0.5-1 lb/acre at V4-V6 stage; or soil apply 10-20 lbs/acre.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Potassium Chloride (0-0-60)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Essential for grain fill, disease resistance, and yield in corn.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply 40-60 lbs/acre; improves stalks strength and reduces lodging.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plant Disease Detection
+{% endblock pagetitle %}
+{% block body %}
+<style>
+  body{
+    overflow-x: hidden;
+  }
+  .p-3.bg-white.shadow.rounded-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media only screen and (max-width: 830px) {
+    .laptop{
+      display: none;
+    }
+  }
+  @media (min-width:830px) and (max-width: 1536px){
+    .mobile{
+      display: none;
+    }
+  }
+</style>
+<div class='mobile p-5'>
+  <div class="row mb-5 text-center text-white">
+    <div class="col-lg-10 mx-auto">
+      <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color:red;"><b>Note✍🏻</b></h1>
+      <p class="lead" style="font-weight: 500;color: black;">Please🙏 Open This Site On Laptop/PC 💻 Screen Only</p>
+      <p class="lead" style="font-weight: 500;color: black;">Thank You 🤝</p>    
+    </div>
+</div>
+</div>
+
+<div class="row mb-5 text-center text-white laptop">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍁Plant Disease
+                Detection🍁 </b></h1>
+        <p class="lead" style="font-weight: 500;color: black;">This AI Engine Will Help To Detect Disease From Following Fruites And Veggies</p>
+    </div>
+</div>
+
+<center class="laptop">
+    <a href="/index">
+    <button class = "bttn-pill bttn-lg btn-success"><b style="color: black;">AI Engine</b></button>
+</a>
+</center>
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://post.healthline.com/wp-content/uploads/2020/09/Do_Apples_Affect_Diabetes_and_Blood_Sugar_Levels-732x549-thumbnail-1-732x549.jpg" alt="Apple"></div>
+          <center><p class="lead" style="font-weight: 500;color: black;">Apple</p></center>
+        </div>
+    </div>
+    
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img  src="https://www.bing.com/th/id/OIP.rKVtMalAki7wWCp1OJ9h9wHaGf?w=211&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Apple Scab"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Apple Scab</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Brown or olive-colored lesions on leaves and fruit.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use fungicide sprays, remove infected leaves, improve air circulation, and avoid overhead watering.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.IF14uBI2M17iFNMwb_q53QHaE5?w=269&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Powdery Mildew"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Powdery Mildew</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> White powdery coating on leaves, stems, and fruit.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Apply sulfur or potassium bicarbonate fungicides, prune affected areas, and ensure good air flow.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img  src="https://www.bing.com/th/id/OIP.tSjC3DON-khjhhrMay90FgHaH2?w=190&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Cedar Apple Rust"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Cedar Apple Rust</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Yellow-orange spots with red borders on leaves.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove galls from nearby cedar trees, apply fungicides in spring, and select resistant varieties.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.chIVqviodHOvDRgkTZ-owwHaEO?w=313&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Leaf Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Leaf Spot (Early Blight)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Small brown spots with concentric rings on leaves.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected leaves, apply copper fungicides, maintain hygiene, and improve drainage.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.leHBAJjIUQX7s3oExwyi2wHaFb?w=219&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Sooty Blotch"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Sooty Blotch</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Dark gray or black smudge-like spots on fruit and leaves.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Improve air circulation, apply fungicides, remove dead wood, and maintain proper spacing.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.pujACzk2jKt1yWeaX5V6RgHaD4?w=322&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Black Rot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Black Rot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Large black or brown lesions on apple fruit with concentric rings and fruit rot.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected fruit and cankers, prune affected branches, apply fungicides, and improve air flow.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.fwGcRbTbwOZN2beGyKM5ygHaIp?w=184&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Fire Blight"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Fire Blight</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Shoots wilt and turn black, blossoms blight, and cankers form on branches.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Prune affected branches, disinfect tools, avoid nitrogen fertilizer, and use resistant varieties.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.BhAyeIuT3yq5OyJxzzuo6QHaGs?w=200&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Rust"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Rust</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Yellow-orange pustules on leaf undersides causing early leaf drop.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove affected leaves, apply sulfur or copper fungicides, and maintain good air circulation.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.r30h329F9z3H36777CCzoQHaFW?w=227&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Alternaria Leaf Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Alternaria Leaf Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Dark concentric rings on leaves resembling a target pattern with yellowing halo.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected leaves, apply copper or sulfur fungicides, improve air circulation, and prune lower branches.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.54nO8iVk9ElCe4sz3bg8xAHaJ4?w=157&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Flyspeck"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Flyspeck</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Small dark, sooty spots clustered on apple fruit surface affecting appearance.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Improve air circulation, apply fungicides in early season, and maintain orchard hygiene.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.Ey-d1axBPxqUwpulJ4fSWAHaJ4?w=160&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Fruit Crack"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Fruit Crack</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Radial cracks on apple fruit skin from irregular watering and temperature stress.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Maintain consistent soil moisture, provide shade cloth during heat, and avoid over-fertilizing.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col-lg-12">
+        <h2 style="color: rgb(4, 54, 4); text-align: center; margin-bottom: 30px;"><b>🥗 Nutritional Supplements & Fertilizers</b></h2>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Quercetin</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Flavonoid antioxidant reduces inflammation and supports immune function.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> One apple provides 4.7mg quercetin; eat daily for anti-inflammatory benefits.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Fiber (Pectin)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Soluble fiber aids digestion, lowers cholesterol, stabilizes blood sugar.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Eat apples with skin; 1 medium apple provides 4.4g fiber (17% daily value).</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Balanced NPK (15-15-15)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Complete fertilizer for overall apple tree growth and fruit development.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply 3-5 oz per tree in early spring; follow with liquid fertilizer every 3 weeks.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Boron</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Essential micronutrient for bone health and hormone regulation.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Apples are good boron source; combine with magnesium-rich foods for better absorption.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Borax or Boron Fertilizer (0.5-2% B)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Corrects boron deficiency, improves pollination and fruit set in apples.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Spray 0.1-0.2% solution during bloom; prevents misshapen fruits and poor flowering.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Zinc Sulfate</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Micronutrient for enzyme function, improves fruit quality and disease resistance.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply 1-2 oz per tree in spring; foliar spray 0.05% during growing season.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

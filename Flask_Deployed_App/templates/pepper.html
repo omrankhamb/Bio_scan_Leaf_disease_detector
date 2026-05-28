@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plant Disease Detection
+{% endblock pagetitle %}
+{% block body %}
+<style>
+  body{
+    overflow-x: hidden;
+  }
+  .p-3.bg-white.shadow.rounded-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media only screen and (max-width: 830px) {
+    .laptop{
+      display: none;
+    }
+  }
+  @media (min-width:830px) and (max-width: 1536px){
+    .mobile{
+      display: none;
+    }
+  }
+</style>
+<div class='mobile p-5'>
+  <div class="row mb-5 text-center text-white">
+    <div class="col-lg-10 mx-auto">
+      <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color:red;"><b>Note✍🏻</b></h1>
+      <p class="lead" style="font-weight: 500;color: black;">Please🙏 Open This Site On Laptop/PC 💻 Screen Only</p>
+      <p class="lead" style="font-weight: 500;color: black;">Thank You 🤝</p>    
+    </div>
+</div>
+</div>
+
+<div class="row mb-5 text-center text-white laptop">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍁Plant Disease
+                Detection🍁 </b></h1>
+        <p class="lead" style="font-weight: 500;color: black;">This AI Engine Will Help To Detect Disease From Following Fruites And Veggies</p>
+    </div>
+</div>
+
+<center class="laptop">
+    <a href="/index">
+    <button class = "bttn-pill bttn-lg btn-success"><b style="color: black;">AI Engine</b></button>
+</a>
+</center>
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+        <a href="{{ url_for('pepper_page') }}"><div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.5TTALfE3ogtJDVUXomgfVgHaE8?w=251&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Pepper Bell"></div></a>
+          <center><p class="lead" style="font-weight: 500;color: black;">Pepper Bell</p></center>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.45eCJwKBQ53pnaeCbnfllAHaEw?w=248&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Bacterial Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Bacterial Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Water-soaked spots on leaves and fruit that become dark and scabby.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use copper sprays, remove infected debris, and practice crop rotation.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.KFd1yb4hx0OXHPWx0--LxgHaFj?w=240&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Anthracnose"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Anthracnose</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Sunken, dark lesions on fruit and stems, often in wet conditions.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove affected fruits, apply fungicides, and avoid overhead irrigation.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.Qn6QJRLwd68JMMtOCjrYZQHaHa?w=196&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Powdery Mildew"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Powdery Mildew</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> White powdery growth on leaves, reducing photosynthesis and vigor.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Apply sulfur or potassium bicarbonate, improve air flow and remove affected growth.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.TPb16AmzZaRz5TeUXB0g8QHaEl?w=276&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Phytophthora Blight"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Phytophthora Blight</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Root and crown rot causing wilting and fruit rot in waterlogged soils.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Improve drainage, avoid overwatering, and use tolerant rootstocks.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.huxFfHdLBxoJYqZmqIjQKwHaEK?w=257&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Mosaic Virus"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Mosaic Virus</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Mottled yellow/green leaf patterns, stunted growth; virus transmitted by aphids.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected plants, control aphid vectors, and use resistant varieties when available.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.2UMfJzwYS8NTtcRai-c5bAHaEK?w=344&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Verticillium Wilt"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Verticillium Wilt</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Wilting and yellowing due to soil-borne fungus; vascular discoloration present.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use crop rotation, remove infected debris, and select tolerant varieties.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.Q6JAYXVKpfyQqnFl9wetvwHaE6?w=257&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Alternaria Leaf Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Alternaria Leaf Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Brown or black lesions on leaves and fruit; can cause defoliation.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected tissue, apply fungicides, and practice good sanitation.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.FaTwW6e_keYwUukTrRJbUwHaE8?w=313&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Target Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Target Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Circular leaf spots with concentric rings leading to defoliation in humid conditions.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Apply appropriate fungicides and reduce leaf wetness.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Fertilizers / Supplements -->
+<div class="row p-5 laptop">
+  <div class="col-lg-12">
+    <h2 style="color: rgb(4, 54, 4); text-align: center; margin-bottom: 30px;"><b>🥗 Common Fertilizers & Supplements</b></h2>
+  </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Balanced NPK (10-10-10)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Supplies N-P-K for vegetative growth and fruit development.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Broadcast or side-dress in early spring and again mid-season per label.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Compost / Organic Matter</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Improves soil structure, microbial activity, and water holding capacity.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Apply a 2–4 inch layer as top-dress or incorporate into beds annually.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Calcium Spray (Ca)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Helps prevent blossom end rot and improves fruit firmness and shelf life.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply as foliar sprays during active fruit growth; follow manufacturer rates.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Epsom Salt (MgSO4)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Provides magnesium for chlorophyll production, can correct magnesium deficiency.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Dissolve in water and apply as foliar spray or soil drench following recommended rates.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Humic / Fulvic Acid</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Improves nutrient uptake and soil microbial activity, helps plant stress tolerance.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply as soil drench or foliar application as per product instructions.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Foliar Micronutrient Spray (B, Zn, Mn)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Quickly corrects micronutrient deficiencies that affect leaf health and fruit set.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Use as a foliar spray following the manufacturer's dilution and timing recommendations.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock body %}

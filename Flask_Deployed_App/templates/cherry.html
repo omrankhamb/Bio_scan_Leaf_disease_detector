@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plant Disease Detection
+{% endblock pagetitle %}
+{% block body %}
+<style>
+  body{
+    overflow-x: hidden;
+  }
+  .p-3.bg-white.shadow.rounded-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media only screen and (max-width: 830px) {
+    .laptop{
+      display: none;
+    }
+  }
+  @media (min-width:830px) and (max-width: 1536px){
+    .mobile{
+      display: none;
+    }
+  }
+</style>
+<div class='mobile p-5'>
+  <div class="row mb-5 text-center text-white">
+    <div class="col-lg-10 mx-auto">
+      <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color:red;"><b>Note✍🏻</b></h1>
+      <p class="lead" style="font-weight: 500;color: black;">Please🙏 Open This Site On Laptop/PC 💻 Screen Only</p>
+      <p class="lead" style="font-weight: 500;color: black;">Thank You 🤝</p>    
+    </div>
+</div>
+</div>
+
+<div class="row mb-5 text-center text-white laptop">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍁Plant Disease
+                Detection🍁 </b></h1>
+        <p class="lead" style="font-weight: 500;color: black;">This AI Engine Will Help To Detect Disease From Following Fruites And Veggies</p>
+    </div>
+</div>
+
+<center class="laptop">
+    <a href="/index">
+    <button class = "bttn-pill bttn-lg btn-success"><b style="color: black;">AI Engine</b></button>
+</a>
+</center>
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/health_benefits_of_cherries_slideshow/1800x1200_health_benefits_of_cherries_slideshow.jpg" alt="Apple" ></div>
+          <center><p class="lead" style="font-weight: 500;color: black;">cherry</p></center>
+        </div>
+    </div>
+    
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.S5R-uoxJXWVdcVZSpP72iwHaE8?w=237&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Cherry Leaf Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Cherry Leaf Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Small purple/brown spots on cherry leaves that enlarge and cause yellowing.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Rake and destroy fallen leaves, apply fungicides in spring, and prune for air circulation.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.i0fr9mccGWM24RUo_kcYtQAAAA?w=258&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Brown Rot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Brown Rot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Brown, sunken spots on cherry fruit and blossom blight affecting yield.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove mummified fruit, prune for air flow, and apply fungicides at bloom and pre-harvest.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.5ZAm2cnR4AIl2f8x1GONewHaE5?w=272&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Bacterial Canker"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Bacterial Canker</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Sunken, oozing cankers on branches with wilting and dieback symptoms.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Prune infected wood, disinfect tools, avoid wounding, and use copper sprays during dormancy.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.urPphLpe6t_sPVje4XWNsAHaHw?w=167&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Shot Hole"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Shot Hole</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Small round lesions on cherry leaves that fall out leaving 'shot holes'.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove affected tissue, improve air circulation, and apply fungicide/bactericide sprays.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.cdx6pPr4RWDlV7ECX-JdQQHaL4?w=160&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Gummosis</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Sap oozing from trunk or branches, often following wounds or infections.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Avoid wounding trees, improve vigor, remove affected branches and treat infections.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.2IW16aeIhK8vQFe8zkvNcQHaE7?w=236&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Powdery Mildew"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Powdery Mildew</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> White powdery coating on cherry leaves, shoots, and fruit surface.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Apply sulfur or potassium bicarbonate sprays, improve air circulation, and remove affected shoots.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.bVVUbEa2JIPfmEZH67zR1gHaFj?w=258&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Bacterial Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Bacterial Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Dark water-soaked spots on cherry leaves and fruit that coalesce.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use disease-free stock, apply copper sprays during wet periods, and increase air circulation.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://www.bing.com/th/id/OIP.HZwa119ykLeDhLC3z2-MgwHaFb?w=269&h=211&c=8&rs=1&qlt=90&o=6&cb=ucfimg1&dpr=1.3&pid=3.1&rm=2&ucfimg=1" alt="Virus Symptoms"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Virus Symptoms</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Stunted growth, leaf mottling, and reduced yield from viral infections.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected trees, control insect vectors, and use certified virus-free planting material.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col-lg-12">
+        <h2 style="color: rgb(4, 54, 4); text-align: center; margin-bottom: 30px;"><b>🥗 Nutritional Supplements & Fertilizers</b></h2>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Anthocyanins</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Powerful antioxidants giving cherries their red color, supports heart health.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Consume 1 cup of fresh cherries daily (60-100g) for optimal antioxidant intake.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Melatonin</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Natural sleep regulator, reduces inflammation and promotes better sleep quality.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> Tart cherry juice or fresh cherries 1-2 hours before bedtime for sleep benefits.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">NPK Fertilizer (10-10-10)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Balanced fertilizer for overall cherry tree health, growth, and fruit production.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply 2-4 oz per tree in spring; repeat every 6 weeks during growing season.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Potassium</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Regulates blood pressure, supports muscle function, prevents cramps.</p>
+          <p style="color: black; font-size: 14px;"><b>Recommendation:</b> One cup of cherries provides 9% daily potassium; ideal post-workout snack.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Muriate of Potash (0-0-60)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> High potassium content boosts fruit quality, size, and sweetness in cherries.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply 1-2 oz per tree in late spring; increases sugar content in fruit.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Calcium Nitrate</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Prevents blossom-end rot, strengthens fruit structure, improves disease resistance.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Spray 1% solution on leaves during fruiting stage; apply 2-3 times per season.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

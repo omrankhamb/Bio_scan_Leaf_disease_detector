@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plant Disease Detection
+{% endblock pagetitle %}
+{% block body %}
+<style>
+  body{
+    overflow-x: hidden;
+  }
+  .p-3.bg-white.shadow.rounded-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media only screen and (max-width: 830px) {
+    .laptop{
+      display: none;
+    }
+  }
+  @media (min-width:830px) and (max-width: 1536px){
+    .mobile{
+      display: none;
+    }
+  }
+</style>
+<div class='mobile p-5'>
+  <div class="row mb-5 text-center text-white">
+    <div class="col-lg-10 mx-auto">
+      <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color:red;"><b>Note✍🏻</b></h1>
+      <p class="lead" style="font-weight: 500;color: black;">Please🙏 Open This Site On Laptop/PC 💻 Screen Only</p>
+      <p class="lead" style="font-weight: 500;color: black;">Thank You 🤝</p>    
+    </div>
+</div>
+</div>
+
+<div class="row mb-5 text-center text-white laptop">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍁Plant Disease
+                Detection🍁 </b></h1>
+        <p class="lead" style="font-weight: 500;color: black;">This AI Engine Will Help To Detect Disease From Following Fruites And Veggies</p>
+    </div>
+</div>
+
+<center class="laptop">
+    <a href="/index">
+    <button class = "bttn-pill bttn-lg btn-success"><b style="color: black;">AI Engine</b></button>
+</a>
+</center>
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+           <a href="{{ url_for('raspberry_page') }}"><div class="card-img-wrapper"><img src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/326/326272/raspberries-with-ketones-in-a-bowl.jpg?w=1155&h=1541" alt="Raspberry"></div></a>
+          <center><p class="lead" style="font-weight: 500;color: black;">Raspberry</p></center>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.marIv7kp8YlbfrAIjhZNpgHaE8?w=279&h=186&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Botrytis Fruit Rot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Botrytis (Gray Mold)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Gray fuzzy mold on fruit and flowers under cool, wet conditions.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Improve air circulation, remove infected fruit, and apply protective fungicides during bloom and harvest.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.b9au4n5qWfzelxOHAY57cwHaE7?w=259&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Anthracnose"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Anthracnose</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Small sunken lesions on canes and fruit leading to fruit rot and dieback.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Prune diseased canes, maintain sanitation, and apply recommended fungicides when needed.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="data:image/webp;base64,UklGRmwmAABXRUJQVlA4IGAmAACwwwCdASo0AeoAPp1Cmkolo6IhqbW9ILATiUAX5tDbR9aM7Pq511JHhb+58gvcmt/viN838bnzr7/wYQqFtXupneg6GYD9rM755P/y80v71/4+CSXvCmnSdD/3JrJMipLx7MDSQswkomI2C3/9INtkqv7oM4kvovAZ2K9Lh405lmIcel7uuO6gp62ZCA6ysrrXA3PHfEWJXGhWJ6tLN4+B/g96r04ta13qmCvkq6O3rgdxwcpLExXsGu3VV8LfLMhaVH9vsrO3F/gEZ4qpXOK7f3rLNGa6p5/Whkz0l9Lq30tkE1JLhvTQ33xoZjSETzbdFYPRVDUJh3tKSoi8mLhbm4lB/FXCmtnPvq529CkGCpuqwHw9KckxCzvHvDisXuLg3n5UAcp4ME0gWhfy+nI0o7Ize0yJtKfGkUGXsGrq2N4MkaoUbtgbBYqW/viJSgDu8exKACc86SH8uEHhDHTcIfq+vWiK+li1Bu82gXqsOg/LLOi5kHSRUAXviSHkELGSKH4b7xR5rjmoMsJliYuStUuKxwRklGkAQhveKq2Ynd7k4SnxPEsUKrKgrwKAYYQ/oWVO412v2AN19D8aF4vc4n8EGj2Yq+LfvEksmuYeUsJ9BGLE8F8LJEnCNSS6JwnSZTwsA9L+7Nfyd4HBQoCH7iztxCNnbk3CihXQHP5xeWsnnzvTTJeWUfrf4torOqNoYYJStm02ms5+2Ncvgo4d+xHuwZyhXiNXssgJg6HjtlphAR2FkDLcEv4ZK1ylrklSYguOpErLOXgi/P0+984volGRTKH5ACNE7hSkpUEbYhuJmdYtSFTrQHAa5EbcRuuouHoA+ehRiUK6m5G15/Jt1Zq4nDfGNzIUFjQbeUB9kpWwtEli/USKjh06M4Z7FkxNnIA2mgPcHt0DT9eexvjsKd3Y3in2BzNASNf65WRX478P3ppsrL1a8LpkSVXxnTeEklUK9EOfSrpv1EM2nmgeHQ7/p8b2BbU/UVdt2OGQaSFohU8ScFmWH4j3rV+G6kuUZ95cC7eCCK8m2m3TELovJytXotRIcLfcCdWtOpdasYvfjXeZTdRCMtLvaI9Zz9U0uhBqoetu4HWuNJ5kX6n3eN5DRwApn6Ra323PucdhMfd8gfcuarieux2KLgNBr9PUKfz8q9s7kO9ynXH5VRW0miIxxWrV7p22oPy5tw37dxJH3E99FS6LD6kO0KN3swLQfxdHliC5eHqM8NH6esyIMavVrJc0BqYDlexdVGB15jaFAraHo1DX6WgFu4l1ckDXPTxTag34Mq33dltdsv2lzS+eGXgnsQ1pK+cRiNMigEVV9UVroYWRYeJ/iaqvYC/tXRbFzJ7ZMVU+0EO1noPo3H8Hr81pi9FaI9sifsXdvmAAs2RCx21GPs6GAnQyQEvYqpna7fAvIqB0QiviuRfkQjD4fAdevI9acdiB/BsBrXIpY7ZbPKXt0sXK7S4MuIXNkF7q/e9p2SUd7sBNdK/yZtgdE1fxo1XbxjcLY5GsWFO9F8l5mc9MwdhhNXGTEim8dnhLKmVzZPveElrErh/xxnHjzi0IUZhnkmvY2qdtMYIqOkhJQ0LpGm/PNDCqQmutgpe3nkJwJEv/bojC86h/X0Ap7hECARpeAZ0+Jf6f93OUf5m8DDmb2GX6Ijs6lzEtzM4Bw82sUtkdo29iBUQhl+1DOxg22txfTPQtavUK6uRuaFbpiLBwwbIa1aoxhM0o6AaGUQO2s00VS6r3Qi4hC84qt6D53sFFyi15E2eMc2+wD3ZVS+vYsxjLg9PSXSkzr97IFi1v6vri9ZkiYpcIeb7+8kUeHjvw46GMeeXJC2dayPPOrJ32cVcVg7wmH8pgkSWNCnIzikydQOoYnPmCUXNa6sI9ysYzOashmpw81B7F4HqQbNyWe1cWeCcOObIVv4GGvg2mNHEzxfSDrlWG1m45VglCSRRUsdv2aELV425XMEaBQ06DvNf0KT/7/+zbZjjsJpiY1q9RN65zDO085GEphg+gXbtdmeizAMS4fEKJXjoxabjz5rzgEYTZcWA1fENlqpeABAMiQFgLNSD4R4ANwh4smRYyp9cayLsi0PtaD6yAAAD+Ts2b/EP1eYU67DCx5AWD/Gn/nUv/FkMd9JLD4981n9o/e1a51kloqPJiKhTtzfyDGdGvrF4pBYcT8NpWTTBshIod7YIzOvSf8h9tPAR5C8T8sQpMwHr1779jvrMDbMDYzq1ImBEfQ52NnONgvd/zlfu+GT9lWRNp916ydbnPbf+Mjx2j5ntTf616iaTESORTV6+8hHOEvewsGzfp1PBEVnFmkMvQSTO8z3gpKwExQ+OlouUWtuACMj7//VdeMl57jUjSE2+s7oOU09KAV5Grm38PqpwramXViZEzsCSRTikxXkOHtYo8aofax4luFx/BlZX0sgXJYaRrH0FNuTKcB4SaOmaZOhRR9tSwb5MCEwfmlawc8b9hloRxwulmXEnxPeXaxYJDFIQsgNCZZI7cqILhBnfTDCCDKQzDfYwKfY6pQMA3507Bhv4JpgVmn+iUoi/wsGr00MYstJaYxixF9VBwwG9BTYuKzS25swb3BipogKUA0CXKwsjPYnf2gaZRBIbALrbNmUaMlBrP/Ft3HAFYCqxSs24sLcoUPJbvx4rwC7/S7rK1k5U9GyrUCuWvx3eFrXOWvKcQ4SP2p6boGi+Xkz628gWA2ZwVOo58gxhFL1oQMe1+98U2OGRd4w1b48bTj6xjm/B0fwv60I/4JBv9C2IPRFVqmPD7q2dRZJVxEE7KKx2jom0k3dxlT6lGAW7Vm1ucEPouyAwygCJ+hZ+OkBCe0IKGQua9N5KcntEqxWSllLuYBXGckNzBVuqJ+wLNCYJXPNf7tBZzyluYeUv4bVpMpOmD7NX8T2qVsvpb0HdVUlyD3dhLcXhydxQJ8jJRMWjeF7DFavuFucxyA9X1NeFsqPd+Gea6/o0S8ocCrxseADJyUZ0bNwqpsLKpSeOG+0WRR1N/cgJgtACyFWPC5GpgcWFwes1kgkbkoJjLjw823ccvUZS5Hnkv5MCOGn4QWq3NTYIChkCBd9dM0HVJ5fmN3phCr0ccysEiy95xxKQuCM72PHsehr7F+odSSagaEim+HEzuQDRNtVQ7VKynnC/1ClsVsFrnc2GN+m+a+aqi5v8rJ6Tz3pN7oUxjOK4SrLtQL4PJqkcfpZ7BKQdKoYc150u3VETs2VD2YCLCvlV1rRVjPonl9BQ4Oi6W1uyW9//8p5FiLRSkO37cMWJ2D2LIv4uvAGsZi1sH99SEGomD5ibpZKHvEGFJlQljghBUyzLlI6I8fxt4UtuzMVo5M/7oQyLLVP5JLPnLPpW4hUV1gE1ZqeX0LVOTiliawSGVbkzmRNWQ7Z1y8TLdvqrvy0cVQepESdYTw7HxvQ1r5McPitjZDAccIysXd30V1U2RBx+idCc3IxJYluqK06NYsVO1x9R1Pyl/TR3Y94u/UwgPdDvz2/GK00WCuZnfAXjaEDyu2nvXheJjl/VGzsCS2koxJmf6zTqxHPqi6fmfR4lQcSEuNovotqkYOTmi5Tapu5E4nYmSGNfIdlbRiPS3bT7CnGiW3eKje91SI38q3Lqu8V7MfKj6PPCDwooiHNsXkTHIesc++BLU6MF5eitbW9Io0Aorlj6qqiLe+GKU/iF1gtoH9DWDtL3cWAiN/q0NHy47rorf4GtGi3nxarj26wGnJ93JyQyDzMruuFNWCOhfYTez6Zohu+CAED2JKjX6gfQqmZC7Jxrj329K4SpL9aAVWlbCQbWMBI8MX2VFQcd4pCwNPcV2Dv9ZeTmusDiCsKbX3mRYmbyTpyzyUR9VXffLINiAnYnn4KIf5gudAu6vC5h7RbFMjgSM1zb3Xh0+IVa1v0vcfSPSJHYMBEc1ZAAFWWyOcu6aMaQF2caiQGNBZ1ZUWIAF3wBTGkldl1paBwPjFoRaWisTcaRmhnvpXJz9wHaSA+u4+IMHWS58JO18nMDubIVi1STA/X0iIteDPCNEDiNb+dV7OpxiXNjC1EyYLwQtFGBbTEeZTnwGNBMvzJ2JrJhR8IT+xTbBch3UgCxY9h9bjKGfl7m3uMrLmpm+CV9TkvZsl07lsjMZU7PH91pnWPhTL/XBuSE3/56DaBgDxCproM3NfDAkWQ/xtFKce0bHp/Z/yr5rgRtYaDcBLvZWh+ipJL/F/gl6/SvkHbRepRvwCtdZrBYEoZmT2r7W3eCSQLJHfnyKkf/2AUqslFK6H1mLBu7BCuiokoqrLuN/WMG1r7CCLdc3uiwlZ5Wr34T/ufaNOOgJy08JlWBpV6znjv7zFygEEN5a5y5/0jyISLcKRonJiGOYwX6G0Db1l3o2FBcIqpvQ3qWXgmUPnLYKZqqq/4jGHiw8rUq7JYPia63obcWt5L0mcuEk2r9SrhMbvJ3m+MoJQKXtemaKVEZvFvaMqVYXY8GZm+SHX3lmP67kY6z49Ec/DvehlVQQy7QjwIiWOsnASTR4nrqYkZ17JHT6Dz0A36gQn6K/cc469uo9JWcZGE/Q46Tydcd/O6CM+CGh95LB49DMHsQRNoTKPpc4DoL1qc9iSAkqBfIrOGPmvDiaiXjLQW+Am7D4PNjlA8tyPe1RgxU8NlRaIxARIZCB6TToDgfk5gmrfU6bl0E9aR455T0J1dHMcB4z4n/AtqkuXJMnNawLynx/4gnN6BU58dG+Qftu7ivVu4FuiZlBCnJK5gqbcB74X82yQkWfLCGy8BUCVLd06gMNlZjaDWBOROHz2i4RGpmRWmwu3TgFVx3q4RjkiQtByT6w1gtaTZqH4ci6JYdjDXVqdppMXg3cZ4MfqjyruE/YPX6z6km1nFlqNDWJFmqZdCqmOY4D04fi+6wAmyoKBG73qpMYROhYj1+sjHfi7GWoQdTQCt2h0eYL0xudZnmTkaw5uILHeECmx/91/8lutEckUZ9v/LAdzFCHk/kA8DZQoSvO8S0vspdbHMKKeh1wyK/sjMXJ4eqK3pIUgI6J1fQLhkGmBsj8v4JEQQwJHnIZ98igCRzeFEDSzXM1q1fMkfxMEswOdUSRkkX6MYl5sBq7dsK8A+ZWkkrd9Owo0268EqIPcL+RBROBLKPAknI9t25LwjPGYM+uKgmKxcu0TLHwhypOqrioNpK86rCAkOup/ER5/p1KnIqkqw+GB2m3EoO1Y9f2DrLXkw3eWT0ARDGkWOVfAKYBCecYxJYInY6nHpYZVel3xSJ5qXwdCyqoOQ5yqeSCi/SEhtoNyfFsHluyJmOcDdtCBT3vNr/VNngS/4mDOCinfe/pbwle/raiPQrvkP+tQub2xatw8PUjScgMOgqH/AfEm7W24AoszC6ftTDxYGaG5tL+qnS2nhXPst1Vye1p3i1Wxmoyr+sxo0xM5PskoUEnvsVRq+UZu3bdcpKUF1+kcHUemkshfppoS4rxL4XD4ie63AcZyNWw8Wlkgpr92uDtBKTfRvrb/ms9dUHECxJIX1XbbholsOX84yTr5lyyOPgxWdESgE+VmyKTmNYnbXfQuMA5pB/qBdzMaGvysr1G2V8vBHkgTprul+P3mGZNMzoQikczb4eHLYF4S3G+CAtaL+zXr+GxHoWwyzYdGU6HzOiO72ZP/Y0OofKytbpx99FNL+36DJibxpg04olQi1zBGDNzPUltnvXiyPDcNRmqf55AZQY2FwB6AczwlodKZqy/UGch/Z+4jY7+7kGAezbAoDvHrbikfoE8gkjJhzmSj5v66ml+ondYjJKSz8cNyc7h/Xbhj+woGc3/P+INV3temMWece3XUfWCsQjpYTLkRN37DaWu0kUeX15uFFUpAUSt9QZbCdsi8pqPLar1Rs4G8HpImYw7w28hR0Yvj5yIWzYdfn2doLv8wc74QOU4ud/Oe7QE4tpD/N2WbGw8B1qQgXoHsbpdkHJ2TSEGpBFC8K88KUyHsbrJdzHRzxhHiZeqqmo2WQ8XQgc6848DDeawX5i1OyMuMgW+wDaNoeaNDbWr8SUrlMF3uYGkLRmgXHlKzdLLMkv5D7ObLdOP1dXCdhaPfMMHvO+KDy8yMujSZ1L1oHJZIkuhmMcXSLWZN2xk09BgMUwJnNJdSlBhHpYEfcJJWUkSq8AwAbCD1wZ6GJQrx35E3zTjBcjGZBhYN+yFctayllhWpZIKuIZiBLKo5KyePletay6x3dkPn3U/E0o8kv2gYgRjd2nhlUGXslASbn5+Gtx9PC39ENRh0fmCQNKj8vTyTel9VW4WVv7aA5lydMWSpy6FiDZoBb8js/VIcUn/aRpZe5Nfy8QMA1GlOddhsUO6Ol7wZdG18T6PBs0ufLSWOBi/afeRqJgnTctamaHp0bDtxKqNQ9aJTc9M53eVVx1gNmDZNjs4TJ8GfVZ/RKHOp3JwOwwCqYryHcCvEwovTuEFSh8kfqa3M0QFFftqz37CvpLF2z7uupTGvCCEZtXUa4iU+ZIHMbq9dnbGF9bXJrLaDixQn5U/ZnVOFveOeeLWt0KyCbobSlR2NZ1YaJ9mC9NmKg2p/m9OfF0Z8ybCH+R6wBtKYtxJ6J0uXoahhZ25bwpZ4MDeCMoqe352dWS/pdeMeYBNduIelfWDasuH6jqs2cNV6/HzCek3tWn8GlZK6h/xgl3Kwnf6VATign9y6+pRC83GJ0nOe9a9eOU065J/0xDJ9HsAptRUlVwA+BW1COg2ovS6jlkXFbYcC9qKWuRCPUEb8x1IZ6kOl1UKA/eifVpM1nXiPUy//rP7sfX4ZQ+9Kbs3zxWR6rZEwRfgYh5jTgw2YisKBEfMp7Pc+AiAJk6//HkvIifsIoDgaVorq+kxrYDpvJjngWCntgqLB4ViB/XsklDu4sqOE7Z2+d/7AppYYkqFEAEdVc0FCSy+ZmHGsVlSjApxqzFl32WeyBNTIhHTPUoZD5aGjcWtvByMyRvxT9wxr7aFFW65aq8fmxbig0upIASLK/bEzQ8QTXNBmA1hqcdyfSXSNX9P64CLRAmjFu7hLeIE6/ni6P/XGh8g00hmVuN9uMzI5jRUhmyLvz1kYL/ZqSRB8Z5DL/T/LJydTPJKoW7r+EwRwDF6v5vHyqvN+bNmvLygcL/vglJSRFpwB6CkuilD82gNzag2O5FIAV2Eyrb+k4ECwgJKGQicNRNkvhvfI0Jds/7O2AzOMxXv6l/L4WDI4Uv7jIU/M1H0X77w1qSOOT+8F7Hpwl0Ynr6CvvWXVl3xRhO/x5iohhAnKt2ylqmpiq434CYKtfrpvScCO9vHWtafyIynG3riXZV6MWY2mOCA420Nro72nCvfdLFfsxASSjNgaSy3Aqdg40Y9ugr3K09Mk+ObNa7h/pmlYTdwbk1ptytg6H5arYE6m0mFgNNfB7pb6jThBeBAImE2CFNoyzR6Z+Viu+Fs00Erbf/5IaW5tdSwoKp7o8/EcFXaT9AKd/+e3DbvkuvPH7AftM20pEHC3aSVgBTRu6x47N2xidGIdeauzlSHwTyV6mVI/DRt87vAclJgU+yvzNlOH7maHnkwSZM0u+LcCfZhDHkKsNYUVBJuIzi1rBdH23ShHkEbIfUqCsJs4SES2WMYW2li1/Ka6rzUYb0fYtE5y8r4uAXOHB1QAPKcBfzb8UUCoBrelFY1WG5tI0ivvNzYiidsi56bhdg2dnkMZQX0XNJ8zaVKV1TPe3xUgt1aL4HrH+T5EKry0JO/sFWfnDxClzrlyjWSUcKuHZq6PsWUqvEb7GBKi9qvm6sayPeNxM8xAaR6ubl8zKvjEOc9cW3cyZ2hzh5faCaEZQ3FicvZlNUshXFPqLbFonp2my3gFHOdmmasLmyX5JU/MpSNZYnjesggCl31PBOybqePkYBYxDxt67H71w3YjUliiSLoRH0qt8HtmU8zwfunq7p/peojC8+QodExiHR+m3QW8yoVxHeAnz7y27Gcic89r4ovCmdvFNhifv/TVMuMr/5xDJPIREO3GB0jqa01TdhQ546z1jJrnHxth6VfYqZMlguzqPUpb4jJmrbWdLKmzAdmSnFqCo6/uJSv4vl01YzyxBTj34SY+6IRcaWjDQpwo98iQO8qEhkYMuyK2RiZ+MT2mELowPqst4Cvv5lYB8gVq7Yy27zVD9aizkpCKgLwsd4GJ2gcaG1fVD7KqJxZCrbB99QET1A4t7P8a4WL9YeoPdl7U6hl0zT+7B9ZR7LQZmJMMH3S4lDwocxwaZgUq3LQrKIVXVRPnMgkWZNri6j4bvp7gVeg/aS/IGyfdeddiGHCpBBEY1U45e7XDHgEfpKXsFyRmBrqeriTgVOHYlObQDDbW1S5Df7SHHiyktV3Nsl9AwWJh40rDM0o9MS6Cz3GO0lHgJoPEjHczTI4mHtIlUuCea0iskgPcXdb02u42/8lK9Lh5iQWTo2e/MGvxmufRm8e1Po92kYQTryUcfbgMCfsMw3oLZgr0tGm/FmpHNO9N20qKcW0A/Qjiq/kgKEzWOhsHiuSzZ8+ykfCfZ2VbRstLVUorCnDTuC+V4Eh8RTeMtFEerKSiqGUxzNUB6yCQXRrLnlTuyQuUpt8L/rFi+FYH2k3n+jSBaUSDLNpaRAD21UwXmLUZuZdV1Yn10FxcLKRIV/8b0UZk/5zPRUOCqjfBkkprzdnV0eY5aUDiYDqXX8cviyK+Ud98gqdOIHgvDnTDr2cEFth41ZMYJMmG8HSqccZ/nRMyL5OgQg6p/Wz76/UWXJZyxRoYFftDjpRBV5bMljVr8UXerjarRfcHivh+baFrzA2HTGwsVBjb9z2O0TFnG7j/leWseHEDzK73/8sO+5IVYYtZLRvEig1J3B9Q3qxwyuafFrAkgMqCQ8xZEcIjHmub9Stq1Q9rbQkoUfdkYLy6Bd6HUGBLykRBQOy6x12bXTLasqalHFSIE4LUcKAbFOG/jL5IFHBYsAh1CAHl+aQN7MXYBFrMi0L/rrryWF4Pbsi0fyGFfHGO6fuxyswQW/osFv5s7RdOkA3emOpoiWBrioEwAXvQbWMr59BMftKO5ml9prbVJ0+mYM4zv16ms9zBQh4TTXkq2UpfdDJVKXHJipbVzXVUVCuBQYAIMH4yeNZ9lRUwOKSC36Bc74Qg0FHYUzVFM1BO1cyrSnyt4qsuZYK753F8BJXSQaEt0WixOEaPBNvMyN7oY7vyZcalKKWM9D6CozqfLUPUtnNwSjhKeS/VnHLnGMCHU4sVcpv8/209xpiBOXiyAMaKfyAaICQoYmxNyGz+cGzpdWnolAiuwH0tsBIZHboXCknbEIoCNIJjM0zhFSZPWibX4RelurOiPMIcxALs4iKKaF32Swsi0qRytezJfLgJSq/lAtLq4WHB5XC6h7eQYfsjxTP3iLVvz5QMIO6j2VTfGl2lLsDVQsAhpDLT5tlQ8UZbeUVkJcKS9neNLfAjvb7jJrH7CeG1EsHUR8/5y3UzAtFiwJ9gA/IOTI06bVaVCZ64ZgNOrLdNVuWk2SHxEzuDlXO57GsNSNXTrHrlgY9FV7Ik++6aKbFp3GO79Ky/zO1hoCh27qv+SQyHk1Z83CR7z+wiY9FP81CcE7EqGRnKwHn5IFX51OpDJxT6dCaisInNOqqtBcoBYCXA1GQoG1FLwkwAp84JC2+KOivEB6Nn8MOSRIg0hiOBUYIwuUsNvx/7GCCW3TkaCv4A52Pm6oi1HI6Wdk1W97f4En4Uyl/hAq203J6sgzcz2RU++eiMmDg+gYcYjl0HNyMolwNZ6pavs4toa062FTq5l8CLrNpNjVAJT8adUA+1LGjDru/ATUFYmqDxO06UH6U4aZGaI8XXUZ+XcNLfjY7ogw/nkNL4n5ZKyJJ9sdn49ycWlPWPiJ77FY0eCc4z3n90dwc3MQ/vxW2m9QvqPgf0YioxIOIS5lzLvfjihNR8Gz2Ss7fr7rkpV2FSeC8NulukKwBaT1NWAlV3pk5S/ROmU68Jut32ha3H7m2PqpB+ERk8xa2rhml3S04RqV+W6w5ZJNsOo4+e7WU142leprd22WFLSHjISByMmIUbNWEVDt1DEAgdSaagiY9OPcI1zh5kXln15K5kUJvvu3mE9sN/WodGJ0w92pNRoNsmDmXl+BIIvkyA0GITXlG8qtpCTqxnzPLN2fPdBmgKfA94ODRdEikVuZfTcD2Harjo/dI/TUpWvQJVQHreU2fyh/hB1V/d23YhEU//2C2DBXxFCV3FeVqzJ+g8KVttW3I5F42KtHgt0VuWinLi5qLesj4I9j4MJ38BAY6rqhGlLD9LuiBaUPzAoeHt3BwDGhZQdfneEL6VpCi8B3OKMWCdFJ+tX5q7fW6TRZhsFFcbQw9+Db26fL3EX/TNnd3/McWDSQ90Y2uqvVe8cqHOGJjWwEghnTBy5iWGmLHx5LgnFRkGNdPM8oHCV+zjmnXdRBHpMeZWCHxzT6V+RTbvrmW+/ReNB8lkn/lUOuJB+9Wehc/EOwPcdwkVUpUKOPsNfSQEx2pLvysAuHhrkix7geTOMZVLa7bmGG8ly9BABvs7oVvWYbeEIVoSEgHo6lDw81IUmF0erfChJgUf9qsHUWPgWJXz6DpiHHwu80UzczyrCjt1b+3gchBTA4wl1RlK6VlYGj6bD5ClzWzPNzeIAximPVYFFXHK0iBhLdpVskmWubuy/woB5euk/9BAXM+4xL5s47F/fK6wb29oVxRXsmBGjS+wePqaA57CUI4LJfjenqO8qr3waj5flKTo5kKiklGnYCu7eI5U9+jYH0H49aNqnC/t5pCne3JJnI1sVW3la5dJdMw6/Ro4jjjwZRIlx+uHLGz65484ngqyIhNSTuxz2P9UUITid3IdQhnTBvmMcjpcRBThyaDvrb6oqDN6CG7Y3iLU0kXZBr1aVgZ+adewxaXfWWpCT0SPSfA2fqF0QpNn7w277SqKETJ2UvwoehJYL+6WUdcr3jBWMhHDdujGBrllDBZ4+RlGlnnBTK4uDMeqBf/NIm7k8pnhlNIDc9P46vL/m8PcYf6Xaxm1saqBT6qOVBW0FnvCM24XyTPvH40gIA+xeLsgnsPFxb4CEcRaAXvvfDewreUk80uT8yChrFOghsxvZw6ae0exbv9v5tKZsPBC9hCftAeykPzdROErhKgivzNfepSLTOuWajIrdZKnpu1frIRp8BY6gGvyK8zNuuk9vFDMDozUwUoJUmVBCfRtkfKw9X57pjcn/6fsZLSoFvHf1t22WtgDrl+mv0VJ5oxyeTlZ0R1qh3n5oH/DQVo6Wie3JiG5veHMgB/GqCaUGvd3ytsFCaFjuWPeIOR10taxBzwWHNQvEXXG+i6SWe4sc/aPy/RfQpCBtRLe+vjt+enY0ivlPyvhUhlZIETPYlT95F4AOZUV9bK8mZ1ibv2vDlOaby1OM+VbxJrQs4MlbPnK9HluUUGyrsteAAJvfdQ77V09wzutuXkBfxuQLYmW5NeZ4a4lYNmi4R+IAk5Ccj6t3sXK2a7dT3nREnVHMaLm268pN5sHKC+Q6haEfzaG64e4wpxxZFJztVIpZ4zEQEnHhWGIdEJiqydI7hcyAlHyTpOTyk0K96joVoscGYSnAcPE7BYHg/PaPav6HskT8s3rZcpmm+dk0KHGDvtf3dFWyWRHYXQ+4modaF7JnFTRreQmF8NgCWI+uRDDDd/uUmx8Wtq4oT/OnBViPXkzYI1t4nWf2tokwIpzZxki9K8NN7VKYgHmfN6tvL57XSfX8DdVHtf0D1oic/QJhWx8kSYpwW9Y5OcpxXXkKdAhqaUKJGRVVWFkrr02XD9kcynwW3vsesC4wDsj5C18baLBbgelmgiSxOcGYXDH74OYF5WEFjc2slesZC+IiHtvo/XHi1hAdHRmFKeFHyRpTMJRJBjM5a1z3W2YRX2GAzZZHqPXQ+tjouWKes5re/AS91pJhPA/baqPZCfUwuC1zYpAETuQ7ZzFpS2dBntZkXn1gbbcB1HTEs6tmE14cSo0TR30pLHJ/auUNGftovoKiGRMaVmAOh951F/50NklnX4RMDXs7QW955KEg+1kmZLeC1Z23qtHNPmA3BamreepZSu8w5i0nAI8tBNYFiY2gpI9Cy7DmPwDyb1WHw4u9K9SuqdHYGxPtrl1vdbDb5pODbwhsVlBCyxFgDJk1k3eEiiblcqF+SySDizdBkmthKDy4umxcwcze/uby0yuVMoxm8nooxaGwKNbJ5ULgCWZYX+htub1qDugGtuZSMyn1ytXpaPOaaHfk0xc8/34c/X6M4AT2xjB+hGdt0hVjTHS6svFjIB5QdP1qnjsSzScwnivorU9S7a8sjKzdHUhRec2G6XZhe0DIgHnIob6S/sxLgOVwUFdf7Xe7poYkk2impgMOsOvJP+bKDbIwMF7co3lfjB05QsuNTUOaOYWFWBw1McjTMjPqjo6aoHpFu+aZEx4lv5jCwD4IeX3w1+0ue/8ec/jNBjYrnI+77xK5w5Xj3UcoK4ZRzcRkyWq4DgH0ccZpkIGtxSXrXnXaEB2fToVIJGr6UjjChLjtNG2ZJRdHUJCsqAvKfbYg09b4dXovn/zGjaNn+K/EJP6tO3mwvn/DVbuLUDlf6kNraIsm7VbFuoPvhJJ6uRZVxYCF24wRllaC9WEtimcuvGjHAwt2uFE2Zem1m5+qc2MUYU+6XxJGmxEDE6HZ6Sa6Lf1wnQQCfhl9uMB6O5y5ui3ZGEL4QEgpUFY0NjGCNJFySMCudfaJ8Ss0xZv4Vsip6u8T7tEYZ0H3JwV0HHRHHhB18vlIDrvkOqFKJVKvnta0yP0PWkeDwSfSztkdDvcDByH/sZd1PJ4ztlSV1YnHyzIR165n5KhO2D/Y1LyY6DU9X+0yzU4cRMb0RwprT9iksJUAZnENZDTL/A2kHu5kxDDjPAwGCbY0+SivbTt9OFxDXwP6KT3/o69cNkG/u8fK19bGs5IidBsVDUNeRIPKCcmO2a88Wag5YFKRnYPXQK7leue81O+J9bpOTvuTCNGDU4YK6Wlsjb8lSLBj2gJYpQa8U9bHq2TdcjN+eKCnDr3++mCJZFptZxMFnPhGWMpRxW4HfiqTCY+7hnpJyxzDJU5r0/8XIppzEec1DBQ2/vsBSk6IAAAA==" alt="Powdery Mildew"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Powdery Mildew</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> White powdery coating on leaves causing reduced vigor and yield.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Improve airflow, remove affected tissue, and apply sulfur-based treatments when necessary.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.sZ5DPEwm1ClqhUnEaAd2vAHaFh?w=230&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Cane Blight"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Cane Blight</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Sunken, discolored lesions on canes leading to dieback and reduced fruiting.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Prune out affected canes, avoid excessive nitrogen, and apply fungicides if outbreak occurs.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.Q1RRJktnKU6oIg-D7csEogHaE8?w=241&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Root Rot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Phytophthora / Root Rot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Poor vigor, wilting and root decay in poorly drained soils.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Improve drainage, plant on raised beds, and avoid overwatering; use resistant rootstocks where available.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.jkkFahkgDt7LWoOF70pQGwHaGl?w=282&h=193&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Rust"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Rust</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Orange or yellow pustules on undersides of leaves causing defoliation in severe cases.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove and destroy infected leaves, improve airflow, and consider fungicide applications during wet weather.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.bkM0za3vcIKh3h1RBgF_agHaEH?w=293&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Spur Blight"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Spur Blight</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Small necrotic spots on leaves and tips of shoots leading to shoot dieback.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Prune and burn affected tips, maintain good sanitation, and apply protectant fungicides if necessary.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col-lg-12">
+        <h2 style="color: rgb(4, 54, 4); text-align: center; margin-bottom: 30px;"><b>🥗 Nutritional Supplements & Fertilizers</b></h2>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Balanced NPK (10-10-10)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Supports overall plant growth and fruit development.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply in early spring and following harvest according to soil test.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Phosphorus Boost</p></center>
+          <p style="color: black; font-size: 14px;"><b>Purpose:</b> Promotes strong root development and flower/fruit set.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply bone meal or rock phosphate when preparing beds if soil tests low.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Organic Compost / Mulch</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Improves soil structure, microbial activity and moisture retention reducing disease pressure.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Add a 2-4 inch layer of compost or well-rotted manure annually.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Potassium (K) Supplement</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Boosts fruit quality and increases disease tolerance under stress.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply muriate of potash or sulfate of potash according to recommendations; foliar K sprays for quick correction.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Calcium / Magnesium</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Prevents physiological disorders and improves cell wall strength, reducing susceptibility to rot.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Apply lime, gypsum, or foliar calcium formulations and magnesium sulfate (Epsom salt) as needed.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Micronutrient Mix (Trace Elements)</p></center>
+          <p style="color: black; font-size: 14px;"><b>Benefit:</b> Supplies Fe, Zn, Mn, B and Cu for balanced plant nutrition and improved disease resistance.</p>
+          <p style="color: black; font-size: 14px;"><b>Application:</b> Use foliar micronutrient sprays or soil-applied chelates per soil test recommendations.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

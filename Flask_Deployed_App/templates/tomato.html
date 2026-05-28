@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plant Disease Detection
+{% endblock pagetitle %}
+{% block body %}
+<style>
+  body{
+    overflow-x: hidden;
+  }
+  .p-3.bg-white.shadow.rounded-lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media only screen and (max-width: 830px) {
+    .laptop{
+      display: none;
+    }
+  }
+  @media (min-width:830px) and (max-width: 1536px){
+    .mobile{
+      display: none;
+    }
+  }
+</style>
+<div class='mobile p-5'>
+  <div class="row mb-5 text-center text-white">
+    <div class="col-lg-10 mx-auto">
+      <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color:red;"><b>Note✍🏻</b></h1>
+      <p class="lead" style="font-weight: 500;color: black;">Please🙏 Open This Site On Laptop/PC 💻 Screen Only</p>
+      <p class="lead" style="font-weight: 500;color: black;">Thank You 🤝</p>    
+    </div>
+</div>
+</div>
+
+<div class="row mb-5 text-center text-white laptop">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍁Plant Disease
+                Detection🍁 </b></h1>
+        <p class="lead" style="font-weight: 500;color: black;">This AI Engine Will Help To Detect Disease From Following Fruites And Veggies</p>
+    </div>
+</div>
+
+<center class="laptop">
+    <a href="/index">
+    <button class = "bttn-pill bttn-lg btn-success"><b style="color: black;">AI Engine</b></button>
+</a>
+</center>
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg" alt="Tomato"></div>
+          <center><p class="lead" style="font-weight: 500;color: black;">Tomato</p></center>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.NQpwRfAkL58NlaZ3BP59JQHaEv?w=304&h=195&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Tomato Leaf Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Tomato Leaf Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Brown to black circular lesions on leaves and fruit; common fungal disease that reduces yield.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected material, rotate crops, avoid overhead irrigation, and apply fungicides as needed.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.w_NEa9DeDBO57DsYXqW00wHaE9?w=274&h=183&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Early Blight"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Early Blight</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Concentric dark rings on lower leaves leading to defoliation and reduced fruit set.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove lower leaves, mulch to prevent soil splash, and apply copper or chlorothalonil-based fungicides.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="data:image/webp;base64,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" alt="Late Blight"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Late Blight</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Rapidly spreading water-soaked lesions on leaves and stems; caused by Phytophthora infestans.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove infected plants, apply appropriate fungicides, and avoid wet foliage conditions.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.pMJEog6eXZZalw4KUzo4xgHaE7?w=261&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Septoria Leaf Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Septoria Leaf Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Small circular spots with gray centers and dark borders on lower leaves.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Remove affected foliage, practice crop rotation, and use fungicide sprays if needed.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="hhttps://th.bing.com/th/id/OIP.Plvt4hROEMtj6EE6NJa68AHaFj?w=308&h=185&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Bacterial Spot"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Bacterial Spot</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Small dark lesions that may coalesce on leaves and fruit; caused by Xanthomonas spp.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use certified disease-free seed, copper sprays, and avoid working plants when wet.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row p-5 laptop">
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.0tOpFKmtU26jzeHXbMg42gHaEu?w=266&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Verticillium Wilt"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Verticillium Wilt</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Yellowing and wilting of leaves often starting on one side of the plant; soil-borne fungus.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Rotate crops, remove infected plants, and use resistant varieties.</p>
+        </div>
+    </div>
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP.gvOTEwMIqzU44h96DGmGBQHaF6?w=231&h=184&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Fusarium Wilt"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Fusarium Wilt</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Wilting and yellowing that progresses to plant death; caused by Fusarium oxysporum in soil.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use resistant varieties, practice crop rotation, and improve soil health; remove and destroy infected plants.</p>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="p-3 bg-white shadow rounded-lg" style="width: 90%;height: 92%;">
+          <div class="card-img-wrapper"><img src="https://th.bing.com/th/id/OIP._t14az53UuWN1_Fg7euDhAHaFj?w=239&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1" alt="Tomato Mosaic Virus"></div>
+          <center><p class="lead" style="font-weight: 600;color: #d9534f;">Tomato Mosaic Virus</p></center>
+          <p style="color: black; font-size: 14px;"><b>Description:</b> Mottling, distortion and stunting of foliage and fruit; spread mechanically and by contaminated tools.</p>
+          <p style="color: black; font-size: 14px;"><b>Remedy:</b> Use virus-free seed/stock, sanitize tools, remove infected plants, and control vectors where applicable.</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Supplements & Fertilizers -->
+    <div class="row p-5 laptop">
+        <div class="col-lg-12">
+            <h2 style="color: rgb(4, 54, 4); text-align: center; margin-bottom: 30px;"><b>🥗 Nutritional Supplements & Fertilizers</b></h2>
+        </div>
+    </div>
+
+    <div class="row p-5 laptop">
+        <div class="col">
+            <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+              <center><p class="lead" style="font-weight: 600;color: #d9534f;">Nearley 6 (Tomato Leaf Fertilizer)</p></center>
+              <p style="color: black; font-size: 14px;"><b>Purpose:</b> Concentrated foliar formula to support leaf health, fruit set, and stress resilience in tomato plants.</p>
+              <p style="color: black; font-size: 14px;"><b>Application:</b> Apply as directed on label during vegetative growth and pre-flowering; repeat as needed following recommendations.</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+              <center><p class="lead" style="font-weight: 600;color: #d9534f;">DAP (High Phosphorus)</p></center>
+              <p style="color: black; font-size: 14px;"><b>Purpose:</b> Diammonium phosphate provides a phosphorus boost to promote root development and early establishment.</p>
+              <p style="color: black; font-size: 14px;"><b>Application:</b> Apply at planting or as recommended by soil test; follow dilution and safety instructions on product label.</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+              <center><p class="lead" style="font-weight: 600;color: #d9534f;">Balanced NPK (15-15-15)</p></center>
+              <p style="color: black; font-size: 14px;"><b>Purpose:</b> Even nitrogen, phosphorus, and potassium to support balanced vegetative growth and fruiting.</p>
+              <p style="color: black; font-size: 14px;"><b>Application:</b> Use as a base fertilizer in early season and follow with targeted feeds during fruiting.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row p-5 laptop">
+        <div class="col">
+            <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+              <center><p class="lead" style="font-weight: 600;color: #d9534f;">Potassium Boost (5-10-5)</p></center>
+              <p style="color: black; font-size: 14px;"><b>Purpose:</b> Higher potassium feed to improve fruit size, flavor and stress tolerance during ripening.</p>
+              <p style="color: black; font-size: 14px;"><b>Application:</b> Apply as a late-season supplement or foliar spray per label to enhance ripening and firmness.</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+              <center><p class="lead" style="font-weight: 600;color: #d9534f;">Tomato Food (Specialized Mix)</p></center>
+              <p style="color: black; font-size: 14px;"><b>Purpose:</b> Formulated for tomatoes (often slightly higher P and K) to support flowering, fruit set and flavor development.</p>
+              <p style="color: black; font-size: 14px;"><b>Application:</b> Follow manufacturer instructions for timing and rates; often applied during flowering and fruit set.</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="p-3 bg-white shadow rounded-lg" style="width: 100%; height: 100%;">
+              <center><p class="lead" style="font-weight: 600;color: #d9534f;">Calcium & Magnesium (CaMg)</p></center>
+              <p style="color: black; font-size: 14px;"><b>Purpose:</b> Prevents blossom-end rot and strengthens fruit quality.</p>
+              <p style="color: black; font-size: 14px;"><b>Application:</b> Foliar or soil application based on tissue/soil tests.</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
